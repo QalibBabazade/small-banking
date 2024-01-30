@@ -1,0 +1,5 @@
+rootProject.name = 'small-banking'
+
+include 'ms-user'
+include 'ms-customer'
+include 'ms-transaction'

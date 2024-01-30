@@ -1,0 +1,24 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/postgres}
+    username: ${DATABASE_USER:test}
+    password: ${DATABASE_SEC:test}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate.format_sql: true
+
+jwt:
+    secret: JWTSuperSecretKeyForAuthentication
+    token:
+       expirationInMs: 86400000
+
+
+
+
