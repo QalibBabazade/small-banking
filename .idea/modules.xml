@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ms-customer/small-banking.ms-customer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ms-customer/small-banking.ms-customer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ms-transaction/small-banking.ms-transaction.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ms-transaction/small-banking.ms-transaction.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ms-user/small-banking.ms-user.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ms-user/small-banking.ms-user.main.iml" />
+    </modules>
+  </component>
+</project>

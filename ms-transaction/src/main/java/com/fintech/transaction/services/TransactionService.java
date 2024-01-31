@@ -30,7 +30,7 @@ public class TransactionService {
 
         AuthResponse authResponse = authService.getUserDetailsByJwtToken(authToken);
 
-        if(Objects.isNull(authResponse)){
+        if (Objects.isNull(authResponse)) {
             throw BaseException.of(ErrorCodes.FORBIDDEN);
         }
         CustomerResponse response = customerService.getCustomerByPin(authResponse.getPin());
@@ -51,7 +51,7 @@ public class TransactionService {
 
         AuthResponse authResponse = authService.getUserDetailsByJwtToken(authToken);
 
-        if(Objects.isNull(authResponse)){
+        if (Objects.isNull(authResponse)) {
             throw BaseException.of(ErrorCodes.FORBIDDEN);
         }
         CustomerResponse response = customerService.getCustomerByPin(authResponse.getPin());
