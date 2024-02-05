@@ -12,6 +12,7 @@ import com.fintech.transaction.mappers.TransactionMapper;
 import com.fintech.transaction.repositories.TransactionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -26,6 +27,7 @@ public class TransactionService {
 
     private final CustomerService customerService;
 
+    @Transactional
     public CommonResponse<String> topup(String authToken, TransactionRequest request) {
 
         AuthResponse authResponse = authService.getUserDetailsByJwtToken(authToken);
@@ -47,6 +49,7 @@ public class TransactionService {
         return CommonResponse.successInstance(ErrorCodes.SUCCESS.getMessage());
     }
 
+    @Transactional
     public CommonResponse<String> purchase(String authToken, TransactionRequest request) {
 
         AuthResponse authResponse = authService.getUserDetailsByJwtToken(authToken);
