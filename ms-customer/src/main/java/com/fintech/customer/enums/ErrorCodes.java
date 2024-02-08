@@ -10,6 +10,7 @@ public enum ErrorCodes {
     INTERNAL_SERVER_ERROR("Internal server error!",10),
     NOT_FOUND("Not found for input parameter!",20),
     MINIMUM_AMOUNT("Minimum amount must be 100 !!!",21),
+    MIN_BIRTH_DATE("Customer must be at least 18 years old!",22),
     INVALID_ARGUMENTS("Invalid arguments!",30);
 
     private final String message;

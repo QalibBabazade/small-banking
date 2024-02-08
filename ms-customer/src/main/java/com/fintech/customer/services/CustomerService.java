@@ -14,6 +14,7 @@ import com.fintech.customer.repositories.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 @Service
@@ -35,6 +36,10 @@ public class CustomerService {
 
         if(request.getBalance().intValue() < 100){
             throw BaseException.of(ErrorCodes.MINIMUM_AMOUNT);
+        }
+
+        if (request.getBirthDate().isAfter(LocalDate.now().minusYears(18))) {
+            throw BaseException.of(ErrorCodes.MIN_BIRTH_DATE);
         }
 
         CustomerEntity entity = customerRepository.save(CustomerMappers.requestToEntity(request, authResponse.getPin()));

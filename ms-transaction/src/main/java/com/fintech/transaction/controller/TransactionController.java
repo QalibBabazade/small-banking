@@ -28,4 +28,10 @@ public class TransactionController {
         return  transactionService.purchase(authToken,request);
     }
 
+    @PostMapping("/refund")
+    public CommonResponse<String> refund(@RequestHeader("authorization") String authToken,
+                                           @RequestBody @Valid TransactionRequest request){
+        return  transactionService.refund(authToken,request);
+    }
+
 }
